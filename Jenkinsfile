@@ -29,8 +29,8 @@ pipeline{
             echo "deploying the docker image..."
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                         sh "echo $PASS | docker login -u $USER --password-stdin"
-                        sh "docker push abdoumin/fullstackapp-backend:0.0.1"
-                        sh "docker push abdoumin/fullstackapp-frontend:0.0.1"
+                        sh "docker push abdoumin/fullstackapp-backend:0.0.2"
+                        sh "docker push abdoumin/fullstackapp-frontend:0.0.2"
                         sh "docker-compose down"
                         sh "docker-compose up --build -d "
                     }}
