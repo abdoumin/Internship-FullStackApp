@@ -12,11 +12,11 @@ pipeline{
                 dir('./Internship-Backend-main') {
                         sh "pwd"
                         sh "ls"
-                        sh 'docker build -t abdoumin/fullstackapp-backend:0.0.1 .'
+                        sh 'docker build -t abdoumin/fullstackapp-backend:0.0.2 .'
                     }
                 dir('./Internship-ReactJS-main') {
                         sh "pwd"
-                        sh 'docker build -t abdoumin/fullstackapp-frontend:0.0.1 .'
+                        sh 'docker build -t abdoumin/fullstackapp-frontend:0.0.2 .'
                     }
             }
         }
