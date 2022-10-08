@@ -11,6 +11,7 @@ pipeline{
             script{
                 dir('./Intenship-Backend-main') {
                         sh "pwd"
+                        sh "ls"
                         sh 'docker build -t abdoumin/fullstackapp-backend:0.0.1 .'
                     }
                 dir('./Internship-ReactJS-main') {
