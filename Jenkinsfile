@@ -9,11 +9,14 @@ pipeline{
     {
         steps {
             script{
-                sh 'cd Intenship-Backend-main'
-                sh 'docker build -t abdoumin/fullstackapp-backend:0.0.1 .'
-                sh 'cd ../Internship-ReactJS-main'
-                sh 'docker build -t abdoumin/fullstackapp-frontend:0.0.1 .'
-                sh 'cd ..'
+                dir('Intenship-Backend-main') {
+                        sh "pwd"
+                        sh 'docker build -t abdoumin/fullstackapp-backend:0.0.1 .'
+                    }
+                dir('./Internship-ReactJS-main') {
+                        sh "pwd"
+                        sh 'docker build -t abdoumin/fullstackapp-frontend:0.0.1 .'
+                    }
             }
         }
     }
