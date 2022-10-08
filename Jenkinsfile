@@ -9,7 +9,7 @@ pipeline{
     {
         steps {
             script{
-                dir('./Intenship-Backend-main') {
+                dir('./Internship-Backend-main') {
                         sh "pwd"
                         sh "ls"
                         sh 'docker build -t abdoumin/fullstackapp-backend:0.0.1 .'
