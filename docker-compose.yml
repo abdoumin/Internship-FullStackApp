@@ -16,7 +16,7 @@ services:
     depends_on:
       - mysqldb
     image :
-      abdoumin/fullstackapp-backend:0.0.1
+      abdoumin/fullstackapp-backend:0.0.2
     restart: on-failure
     ports:
       - 6868:8080
@@ -28,7 +28,7 @@ services:
 
 
   front-end:
-    image : abdoumin/fullstackapp-frontend:0.0.1
+    image : abdoumin/fullstackapp-frontend:0.0.2
     restart: always
     networks:
       - frontend
